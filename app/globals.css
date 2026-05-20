@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+/* ローズ (デフォルト) */
+:root,
+[data-theme="default"] {
+  --c-primary:       #E8837A;
+  --c-primary-dark:  #CC6860;
+  --c-primary-sub:   #F5C0BB;
+  --c-primary-light: #FDE8E6;
+  --c-primary-muted: #ECA8A2;
+  --c-bg:            #FFF8F7;
+  --c-border:        #F0D5D2;
+  --c-fg:            #2D1A18;
+  --c-text-sub:      #9A7070;
+}
+
+[data-theme="red"] {
+  --c-primary:       #E03030;
+  --c-primary-dark:  #C01818;
+  --c-primary-sub:   #F5A0A0;
+  --c-primary-light: #FFEBEB;
+  --c-primary-muted: #E87070;
+  --c-bg:            #FFF5F5;
+  --c-border:        #F0C0C0;
+  --c-fg:            #280808;
+  --c-text-sub:      #906060;
+}
+
+[data-theme="blue"] {
+  --c-primary:       #3070D0;
+  --c-primary-dark:  #1858B0;
+  --c-primary-sub:   #A0C0F0;
+  --c-primary-light: #DCE8FF;
+  --c-primary-muted: #6898D8;
+  --c-bg:            #F5F8FF;
+  --c-border:        #C0D4F0;
+  --c-fg:            #080F28;
+  --c-text-sub:      #507090;
+}
+
+[data-theme="yellow"] {
+  --c-primary:       #D0A800;
+  --c-primary-dark:  #A88000;
+  --c-primary-sub:   #F0D840;
+  --c-primary-light: #FFF8CC;
+  --c-primary-muted: #D8C040;
+  --c-bg:            #FFFDF0;
+  --c-border:        #E8D870;
+  --c-fg:            #282000;
+  --c-text-sub:      #807030;
+}
+
+[data-theme="green"] {
+  --c-primary:       #30A050;
+  --c-primary-dark:  #188038;
+  --c-primary-sub:   #90D0A0;
+  --c-primary-light: #D8F5E0;
+  --c-primary-muted: #68B880;
+  --c-bg:            #F5FFF8;
+  --c-border:        #A0D8B0;
+  --c-fg:            #081808;
+  --c-text-sub:      #407850;
+}
+
+[data-theme="gray"] {
+  --c-primary:       #707070;
+  --c-primary-dark:  #505050;
+  --c-primary-sub:   #B0B0B0;
+  --c-primary-light: #E8E8E8;
+  --c-primary-muted: #909090;
+  --c-bg:            #F8F8F8;
+  --c-border:        #D0D0D0;
+  --c-fg:            #202020;
+  --c-text-sub:      #707070;
+}
+
+[data-theme="white"] {
+  --c-primary:       #909090;
+  --c-primary-dark:  #707070;
+  --c-primary-sub:   #D0D0D0;
+  --c-primary-light: #F0F0F0;
+  --c-primary-muted: #B0B0B0;
+  --c-bg:            #FFFFFF;
+  --c-border:        #E0E0E0;
+  --c-fg:            #303030;
+  --c-text-sub:      #808080;
+}
+
+[data-theme="black"] {
+  --c-primary:       #202020;
+  --c-primary-dark:  #000000;
+  --c-primary-sub:   #606060;
+  --c-primary-light: #B8B8B8;
+  --c-primary-muted: #484848;
+  --c-bg:            #F0F0F0;
+  --c-border:        #C8C8C8;
+  --c-fg:            #101010;
+  --c-text-sub:      #505050;
+}
+
+[data-theme="purple"] {
+  --c-primary:       #8030C0;
+  --c-primary-dark:  #6018A0;
+  --c-primary-sub:   #C090E0;
+  --c-primary-light: #EDD8FF;
+  --c-primary-muted: #A060D0;
+  --c-bg:            #FAF5FF;
+  --c-border:        #D0B0E8;
+  --c-fg:            #180828;
+  --c-text-sub:      #7050A0;
+}
+
+[data-theme="pink"] {
+  --c-primary:       #E040A0;
+  --c-primary-dark:  #C02888;
+  --c-primary-sub:   #F0A0D0;
+  --c-primary-light: #FFD8F0;
+  --c-primary-muted: #E878B8;
+  --c-bg:            #FFF5FB;
+  --c-border:        #F0C0E0;
+  --c-fg:            #280818;
+  --c-text-sub:      #A05080;
+}
+
+[data-theme="orange"] {
+  --c-primary:       #E07020;
+  --c-primary-dark:  #C05808;
+  --c-primary-sub:   #F0B060;
+  --c-primary-light: #FFE8CC;
+  --c-primary-muted: #E09050;
+  --c-bg:            #FFF8F0;
+  --c-border:        #F0D0A0;
+  --c-fg:            #281408;
+  --c-text-sub:      #905030;
+}
+
+body {
+  background: var(--c-bg);
+  color: var(--c-fg);
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, Arial, sans-serif;
+  min-height: 100dvh;
+}
