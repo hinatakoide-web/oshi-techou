@@ -13,6 +13,16 @@ async function computeToken(): Promise<string> {
 }
 
 export async function POST(req: Request) {
+  const adminId = process.env.ADMIN_ID;
+  const adminPassword = process.env.ADMIN_PASSWORD;
+
+  console.log("[login] ADMIN_ID set:", !!adminId, "/ ADMIN_PASSWORD set:", !!adminPassword);
+
+  if (!adminId || !adminPassword) {
+    console.error("[login] Environment variables are not configured");
+    return NextResponse.json({ error: "サーバー設定エラーです" }, { status: 500 });
+  }
+
   let id: string, password: string;
   try {
     ({ id, password } = await req.json());
@@ -20,7 +30,9 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "リクエストが不正です" }, { status: 400 });
   }
 
-  if (!id || !password || id !== process.env.ADMIN_ID || password !== process.env.ADMIN_PASSWORD) {
+  console.log("[login] id match:", id === adminId, "/ password match:", password === adminPassword);
+
+  if (!id || !password || id !== adminId || password !== adminPassword) {
     return NextResponse.json(
       { error: "IDまたはパスワードが正しくありません" },
       { status: 401 }
